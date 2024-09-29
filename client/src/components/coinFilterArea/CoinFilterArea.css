@@ -1,0 +1,349 @@
+/* Container and Layout */
+.mainContainer .mainContent .container .coinFilterArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Section */
+.mainContainer .mainContent .container .coinFilterArea .logoAndSearch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .logoAndSearch .logo {
+    display: flex;
+    align-items: center;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .logoAndSearch .logo .upbit,
+.mainContainer .mainContent .container .coinFilterArea .logoAndSearch .logo .bybit {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .logoAndSearch .logo .upbit .logoIma, 
+.mainContainer .mainContent .container .coinFilterArea .logoAndSearch .logo .bybit .logoIma {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .logoAndSearch .logo .upbit .rightMargin {
+    margin-right: 5px;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .logoAndSearch .logo .bybit .leftMargin {
+    margin-left: 5px;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .logoAndSearch .logo .bybit .logoIma.bybitBorder {
+    border: 1px solid #ccc;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .logoAndSearch .logo .twoWayArrowIcon {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+}
+
+.search {
+    flex-grow: 0; /* 검색 필드가 flex-grow로 확장되지 않도록 설정 */
+    flex-shrink: 0; /* 검색 필드가 화면이 작아질 때도 줄어들지 않도록 */
+}
+
+.mainContainer .mainContent .container .coinFilterArea .logoAndSearch .search .searchFild {
+    max-width: 300px; /* 검색 입력 필드의 최대 너비 제한 */
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #e9e9e9;
+    border: 1px solid #ccc;
+    padding: 0 15px;
+}
+
+/* Responsive Flexbox for Coin Info Section */
+.mainContainer .mainContent .container .coinFilterArea .coins {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .coins .top,
+.mainContainer .mainContent .container .coinFilterArea .coins .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo and Name */
+.mainContainer .mainContent .container .coinFilterArea .coins .top .logoAndName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .coins .top .logoAndName .logo {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .coins .top .logoAndName .name {
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Price and Premium Boxes */
+.mainContainer .mainContent .container .coinFilterArea .coins .top .upbitPrice,
+.mainContainer .mainContent .container .coinFilterArea .coins .top .bybitPrice,
+.mainContainer .mainContent .container .coinFilterArea .coins .top .kimpPremium {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    flex-grow: 1; /* flex-grow로 상위 요소 크기에 따라 유연하게 변화 */
+    min-width: 120px; /* 최소 너비 지정 */
+    max-width: 150px; /* 최대 너비 지정 */
+    width: 100%; /* 너비를 100%로 설정 */
+}
+
+/* Kimchi Premium Box */
+.mainContainer .mainContent .container .coinFilterArea .coins .top .kimpPremium {
+    flex-grow: 2; /* 김치 프리미엄 박스는 더 크게 설정 */
+    min-width: 150px; /* 최소 너비 지정 */
+    max-width: 250px; /* 최대 너비 지정 */
+    width: 100%;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .coins .top .kimpPremium .kimp {
+    text-align: center;
+    color: blue;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .coins .top .kimpPremium .reverse {
+    text-align: center;
+    color: red;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .coins .title {
+    font-size: 12px;
+    color: #777;
+    margin-right: 5px;
+}
+
+/* Symbol between Upbit and Bybit Prices */
+.mainContainer .mainContent .container .coinFilterArea .coins .top .symbol {
+    font-size: 40px;
+    font-weight: bold;
+    color: #777;
+}
+
+/* Bottom Info Boxes */
+.mainContainer .mainContent .container .coinFilterArea .coins .bottom .signedChangeRate,
+.mainContainer .mainContent .container .coinFilterArea .coins .bottom .lowest52WeekPrice,
+.mainContainer .mainContent .container .coinFilterArea .coins .bottom .accTradePrice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    flex-grow: 1; /* 상위 요소 크기에 맞춰 유연하게 변화 */
+    min-width: 160px; /* 최소 너비 지정 */
+    max-width: 220px; /* 최대 너비 지정 */
+    width: 100%;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .coins .bottom .signedChangeRate .rise {
+    color: red;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .coins .bottom .signedChangeRate .fall {
+    color: blue;
+}
+
+.mainContainer .mainContent .container .coinFilterArea .coins .bottom .signedChangeRate .even {
+    color: black;
+}
+
+@media (max-width: 990px) {
+    .mainContainer .mainContent .container .coinFilterArea .coins .top .upbitPrice,
+    .mainContainer .mainContent .container .coinFilterArea .coins .top .bybitPrice {
+        flex-grow: 1;
+        min-width: 100px; /* 최소 너비 지정 */
+        max-width: 120px; /* 최대 너비 조정 */
+        width: 100%;
+        height: 85px;
+    }
+
+    /* Kimchi Premium Box */
+    .mainContainer .mainContent .container .coinFilterArea .coins .top .kimpPremium {
+        flex-grow: 2;
+        min-width: 120px; /* 최소 너비 지정 */
+        max-width: 150px; /* 최대 너비 조정 */
+        width: 100%;
+    }
+
+    
+    .mainContainer .mainContent .container .coinFilterArea .coins .bottom .signedChangeRate,
+    .mainContainer .mainContent .container .coinFilterArea .coins .bottom .lowest52WeekPrice,
+    .mainContainer .mainContent .container .coinFilterArea .coins .bottom .accTradePrice {
+        min-width: 120px;
+        max-width: 160px;
+        height: 64px;
+    }
+
+    .mainContainer .mainContent .container .coinFilterArea .coins .block990 {
+        display: block;
+    }
+
+}
+
+@media (max-width: 770px) {
+    .mainContainer .mainContent .container .coinFilterArea .coins .top .upbitPrice,
+    .mainContainer .mainContent .container .coinFilterArea .coins .top .bybitPrice {
+        flex-grow: 1;
+        min-width: 80px; /* 더 작은 화면에 맞춰 최소 너비 조정 */
+        max-width: 100px;
+        width: 100%;
+    }
+
+    /* Kimchi Premium Box */
+    .mainContainer .mainContent .container .coinFilterArea .coins .top .kimpPremium {
+        flex-grow: 2;
+        min-width: 100px;
+        max-width: 130px;
+        width: 100%;
+    }
+
+    .mainContainer .mainContent .container .coinFilterArea .coins .bottom .signedChangeRate,
+    .mainContainer .mainContent .container .coinFilterArea .coins .bottom .lowest52WeekPrice,
+    .mainContainer .mainContent .container .coinFilterArea .coins .bottom .accTradePrice {
+        min-width: 100px;
+        max-width: 145px;
+    }
+
+    .logoAndSearch {
+        flex-direction: column; /* 작은 화면에서는 세로로 배치 */
+        align-items: flex-start;
+    }
+    
+    .search {
+        display: flex;
+        justify-content: center;
+        width: 100%; /* 검색 입력 필드가 전체 너비를 차지하도록 */
+        margin-top: 10px; /* 로고와 검색 입력 필드 사이 간격 추가 */
+    }
+}
+
+@media (max-width: 500px) {
+    /* 검색 입력 필드가 모바일에서 적절하게 조정되도록 */
+    .mainContainer .mainContent .container .coinFilterArea .logoAndSearch .search .searchFild {
+        max-width: 100%; /* 입력 필드가 모바일 화면의 최대 너비에 맞추도록 */
+        height: 36px; /* 높이를 약간 줄임 */
+        padding: 0 10px; /* 좌우 패딩 줄임 */
+    }
+
+    .mainContainer .mainContent .container .coinFilterArea .logoAndSearch .search .searchFild::placeholder {
+        font-size: 11px;
+    }
+
+    /* 아이콘 크기 축소 */
+    .mainContainer .mainContent .container .coinFilterArea .logoAndSearch .logo .upbit .logoIma,
+    .mainContainer .mainContent .container .coinFilterArea .logoAndSearch .logo .bybit .logoIma {
+        width: 30px;
+        height: 30px;
+    }
+
+    .mainContainer .mainContent .container .coinFilterArea .logoAndSearch .logo .upbit .exchange ,
+    .mainContainer .mainContent .container .coinFilterArea .logoAndSearch .logo .bybit .exchange {
+        font-size: 11px;
+    }
+    
+    .mainContainer .mainContent .container .coinFilterArea .coins .top {
+        gap: 5px; /* 기존의 gap이 큰 경우 값을 줄입니다 */
+    }
+    
+    .mainContainer .mainContent .container .coinFilterArea .coins .top .logoAndName .logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* 코인 이름의 폰트 사이즈 축소 */
+    .mainContainer .mainContent .container .coinFilterArea .coins .top .logoAndName .name {
+        font-size: 11px; /* 폰트 사이즈 축소 */
+    }
+
+    .mainContainer .mainContent .container .coinFilterArea .coins .title {
+        font-size: 8px;
+    }
+    
+    /* 코인 정보 섹션에서 아이템들이 너무 크지 않게 조정 */
+    .mainContainer .mainContent .container .coinFilterArea .coins .top .upbitPrice,
+    .mainContainer .mainContent .container .coinFilterArea .coins .top .bybitPrice,
+    .mainContainer .mainContent .container .coinFilterArea .coins .top .kimpPremium {
+        font-size: 11px; /* 폰트 사이즈를 줄여서 가독성을 유지 */
+        padding: 5px; /* 패딩을 줄여서 레이아웃 밀리지 않도록 */
+        flex: 1; /* 각 항목이 동일한 비율로 배치되도록 유지 */
+        min-width: 50px; /* 최소 너비 축소 */
+        height: 64px;
+    }
+    
+    /* 두 가격 섹션 간격 줄이기 */
+    .mainContainer .mainContent .container .coinFilterArea .coins .top .symbol {
+        font-size: 30px; /* 텍스트 크기 축소 */
+    }
+    
+    /* 김치 프리미엄 항목 */
+    .mainContainer .mainContent .container .coinFilterArea .coins .top .kimpPremium {
+        flex: 1.5; /* 다른 항목보다 약간 더 넓게 */
+        flex-grow: 1.5;
+        max-width: 70px; /* 최소 너비 축소 */
+        font-size: 11px;
+        padding: 5px;
+    }
+    
+    /* 하단 정보 박스의 간격 줄이기 */
+    .mainContainer .mainContent .container .coinFilterArea .coins .bottom {
+        gap: 8px; /* 간격 축소 */
+    }
+
+    /* 아래 섹션의 정보 박스들 크기 축소 */
+    .mainContainer .mainContent .container .coinFilterArea .coins .bottom .signedChangeRate,
+    .mainContainer .mainContent .container .coinFilterArea .coins .bottom .lowest52WeekPrice,
+    .mainContainer .mainContent .container .coinFilterArea .coins .bottom .accTradePrice {
+        font-size: 11px; /* 텍스트 크기 축소 */
+        padding: 5px; /* 패딩 줄임 */
+        flex: 1; /* 균일하게 배치되도록 설정 */
+        min-width: 90px; /* 최소 너비 축소 */
+        max-width: 110px;
+    }
+}
