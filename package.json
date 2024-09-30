@@ -2,9 +2,11 @@
     "name": "kimpviewer",
     "version": "1.0.0",
     "scripts": {
-        "client": "npm start --prefix client",
-        "server": "npm start --prefix server",
-        "start": "concurrently \"npm run server\" \"npm run client\""
+        "install-client": "cd client && npm install",
+        "install-server": "cd server && npm install",
+        "build-client": "cd client && npm run build",
+        "start": "concurrently \"npm run install-client && npm run install-server\" \"npm run start-server\"",
+        "start-server": "cd server && node server.js"
     },
     "dependencies": {
         "concurrently": "^6.2.0"
